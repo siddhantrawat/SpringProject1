@@ -30,9 +30,9 @@ public class CarsController {
         carsService.addCar(car);
     }
     @RequestMapping(method = RequestMethod.PUT, value = "/cars/{id}")
-    public void updateCar(@RequestBody Cars car)
+    public void updateCar(@RequestBody Cars car, @PathVariable int id)
     {
-        carsService.updateCar(car);
+        carsService.updateCar(car, id);
     }
     @RequestMapping(method = RequestMethod.DELETE, value = "/cars/{id}")
     public void deleteCar(@PathVariable int id)
