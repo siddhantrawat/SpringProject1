@@ -7,7 +7,6 @@ import java.time.Year;
 @Table(name="CARS")
 public class Cars {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="CAR_ID")
     private int car_id;
     @Column(name="CAR_MAKE")
@@ -16,8 +15,8 @@ public class Cars {
     private String car_model;
     @Column(name="CAR_TYPE")
     private String car_type;
-    @Column(name="MKYEAR")
-    private Year year;
+    @Column(name="MFYEAR")
+    private int year;
     @Column(name="COLOR")
     private String color;
 
@@ -53,11 +52,11 @@ public class Cars {
         this.car_type = car_type;
     }
 
-    public Year getYear() {
+    public int getYear() {
         return year;
     }
 
-    public void setYear(Year year) {
+    public void setYear(int year) {
         this.year = year;
     }
 

@@ -19,4 +19,8 @@ public class CarsService {
         carsRepository.findAll().forEach(cars::add);
         return cars;
     }
+
+    public void addCar(Cars car) {
+        carsRepository.save(car);
+    }
 }
