@@ -13,8 +13,6 @@ import java.util.List;
 public class CarsService {
     @Autowired
     private CarsRepository carsRepository;
-
-    @RequestMapping("/cars")
     public List<Cars> getAll()
     {
         List<Cars> cars = new ArrayList<>();
