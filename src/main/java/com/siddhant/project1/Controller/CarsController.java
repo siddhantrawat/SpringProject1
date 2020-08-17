@@ -18,6 +18,12 @@ public class CarsController {
         return carsService.getAll();
     }
     @RequestMapping("/cars/")
+    public Cars getCar(@RequestParam(name = "make")String make, @RequestParam(name = "type") String type)
+    {
+        return carsService.getCar(make, type);
+    }
+
+
     @RequestMapping(method = RequestMethod.POST , value ="/cars")
     public void addCar(@RequestBody Cars car)
     {

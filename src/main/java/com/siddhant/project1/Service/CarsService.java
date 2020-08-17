@@ -32,4 +32,10 @@ public class CarsService {
     public void deleteCar(int id) {
         carsRepository.deleteById(id);
     }
+
+    public Cars getCar(String make, String type) {
+        List<Cars> cars = new ArrayList<>();
+        carsRepository.findAll().forEach(c-> {if(c.getCar_make().contains(make)) cars.add(c);});
+        return cars.stream().filter(c->c.getCar_type().equals(type)).findFirst().get();
+    }
 }
