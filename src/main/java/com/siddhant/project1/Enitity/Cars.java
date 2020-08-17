@@ -7,6 +7,7 @@ import java.time.Year;
 @Table(name="CARS")
 public class Cars {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="CAR_ID")
     private int car_id;
     @Column(name="CAR_MAKE")
